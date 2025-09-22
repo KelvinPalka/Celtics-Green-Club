@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+}
+
+.banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1));
+    z-index: 2;
+}
+
+.imgbanner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.overlay {
+    position: absolute;
+    top: 10%;
+    left: 2%;
+    z-index: 2;
+    text-align: left;
+}
+
+.titulos {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.subtitulo_banner {
+    font-family: var(--font-subtitulo);
+    font-size: var(--titulo-m);
+    margin: 0 0 -20px 0;
+    color: var(--white);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.subtitulo_banner_2 {
+    font-family: var(--font-corpo);
+    font-size: var(--texto-m)
+}
+
+.subtitulo_banner_3 {
+    font-family: var(--font-corpo);
+    font-weight: 600;
+    font-size: var(--texto-m);
+    margin-top: 1.5rem;
+}
+
+.slogan {
+    width: 60%;
+}
+
+.titulo {
+    font-family: var(--font-titulo);
+    font-size: var(--titulo-gg);
+    margin: 0;
+    color: var(--white);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.botao {
+    margin-top: 4rem;
+}
+
+.botao button {
+    width: 200px;
+    height: 50px;
+    margin-right: 15px;
+    border: none;
+    border-radius: 50px;
+    font-size: var(--fs-link);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.botao .secundario {
+    background-color: rgba(0, 0, 0, 0.4);
+    color: var(--white);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.botao .secundario:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: var(--white);
+}
+
+.botao .assinar {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--celtics-green-1);
+    color: var(--white);
+    font-weight: bold;
+    font-size: 1.2rem;
+    border: 2px solid var(--celtics-green-2);
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 122, 51, 0.5);
+    transition: all 0.3s ease;
+}
+
+.botao .assinar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(120deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.4) 50%,
+            rgba(255, 255, 255, 0) 100%);
+    transform: skewX(-25deg);
+    animation: shine 2s infinite;
+}
+
+.botao .assinar:hover {
+    background-color: var(--celtics-green-2);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 122, 51, 0.6);
+}
+
+@keyframes shine {
+    0% {
+        left: -75%;
+    }
+
+    100% {
+        left: 125%;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .overlay {
+        left: 10%;
+        top: 40%;
+        transform: translateY(-50%);
+        max-width: 800px;
+    }
+
+    .slogan {
+        width: 70%;
+    }
+}
+
+.sobre, .vantagens{
+    padding: 30px 50px;
+}
+
+.texto {
+    font-family: var(--font-corpo);
+    font-size: var(--texto-m);
+    text-align: justify;
+    margin-top: 5px;
+}
+
+.titulo2 {
+    font-family: var(--font-titulo);
+    color: var(--celtics-green-2);
+    font-size: var(--titulo-m);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+}
+
+.cards li {
+  background-color: var(--cinza-fundo);
+  padding: 20px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cards li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.card_icon {
+  background-color: rgba(0,122,51,0.2);
+  color: var(--celtics-green-2);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.card_title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--celtics-green-1);
+}
+
+.card_desc {
+  font-size: 0.9rem;
+  color: var(--black);
+  line-height: 1.4;
+}
+
+.feedbacks{
+    padding: 30px 50px;
+}

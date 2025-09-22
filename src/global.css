@@ -1,0 +1,33 @@
+:root{
+    --celtics-green-1: #008348;
+    --celtics-green-2: #007A33;
+    --celtics-green-3: #00421c;
+
+    --celtics-gold: #BA9653;
+    --celtics-brown: #963821;
+    --white: #FFFFFF;
+    --black: #000000;
+    --cinza-fundo: #efefef;
+
+    --font-titulo: 'Bebas Neue', sans-serif;
+    --font-subtitulo: 'Dancing Script', sans-serif;
+    --font-corpo: 'Lato', sans-serif;
+
+    --titulo-gg: 6rem;
+    --titulo-g: 5rem;
+    --titulo-m: 3rem;
+    --titulo-p: 2rem;
+    --texto-g: 1.8rem;
+    --texto-m: 1.2rem;
+    --texto-p: 1rem
+    --link: 1.1rem;
+
+    --icon-gg: 2.5rem;
+    --icon-g: 2rem;
+    --icon-m: 1.5rem;
+    --icon-p: 1.2rem;
+}
+
+*{
+    font-family: var(--font-corpo);
+}
