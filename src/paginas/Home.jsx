@@ -4,6 +4,7 @@ import { Footer } from '../componentes/Footer'
 import { FeedbackSlider } from '../componentes/FeedbackSlider'
 import { FaGift } from "react-icons/fa";
 import { GoCalendar } from "react-icons/go";
+import { Link } from 'react-router-dom'
 import { PiCloverBold } from "react-icons/pi";
 import { TbStar, TbTicket, TbNews, TbMail, TbBook, TbDeviceMobile, TbCoins, TbTrophy, TbUserCheck } from "react-icons/tb";
 
@@ -24,14 +25,24 @@ export function Home() {
                         </div>
                     </div>
                     <div className={estilos.botao}>
-                        <button className={estilos.secundario}>Descubra Mais</button>
-                        <button className={estilos.assinar}>Assinar Agora</button>
+                        <button
+                            className={estilos.secundario}
+                            onClick={() => {
+                                const secao = document.getElementById("boston-celtics");
+                                if (secao) {
+                                    secao.scrollIntoView({ behavior: "smooth" });
+                                }
+                            }}
+                        >
+                            Descubra Mais
+                        </button>
+                        <Link to="/assinatura"><button className={estilos.assinar}>Assinar Agora</button></Link>
                     </div>
                 </div>
             </div>
 
 
-            <div className={estilos.sobre}>
+            <div id="boston-celtics" className={estilos.sobre}>
                 <h2 className={estilos.titulo2}>Boston Celtics</h2>
                 <p className={estilos.texto}>O Boston Celtics é um dos times mais icônicos e vitoriosos da história da NBA, com 18 campeonatos e uma tradição que atravessa gerações. Fundado em 1946, o clube é sinônimo de excelência, jogando com um estilo coletivo e competitivo que conquistou fãs ao redor do mundo. Jogadores lendários como Bill Russell, Larry Bird e Paul Pierce definiram a história da franquia, mas a paixão e dedicação dos Celtics continuam vivos em cada jogo, com o time sempre em busca de novos títulos e momentos inesquecíveis. Ao fazer parte da nossa comunidade, você se junta a uma legião de torcedores apaixonados e entra para a história de um dos maiores times do basquete mundial.</p>
             </div>

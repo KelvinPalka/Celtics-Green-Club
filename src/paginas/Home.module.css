@@ -166,7 +166,8 @@
     }
 }
 
-.sobre, .vantagens{
+.sobre,
+.vantagens {
     padding: 30px 50px;
 }
 
@@ -184,54 +185,97 @@
 }
 
 .cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 
 }
 
 .cards li {
-  background-color: var(--cinza-fundo);
-  padding: 20px;
-  border-radius: 12px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: var(--cinza-fundo);
+    padding: 20px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .cards li:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 .card_icon {
-  background-color: rgba(0,122,51,0.2);
-  color: var(--celtics-green-2);
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.2rem;
+    background-color: rgba(0, 122, 51, 0.2);
+    color: var(--celtics-green-2);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
 }
 
 .card_title {
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--celtics-green-1);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--celtics-green-1);
 }
 
 .card_desc {
-  font-size: 0.9rem;
-  color: var(--black);
-  line-height: 1.4;
+    font-size: 0.9rem;
+    color: var(--black);
+    line-height: 1.4;
 }
 
-.feedbacks{
+.feedbacks {
     padding: 30px 50px;
+}
+
+@media screen and (max-width: 435px) {
+    .titulos {
+        margin-left: 15px;
+    }
+
+    .botao {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .assinar {
+        margin-top: 10px;
+    }
+
+    .subtitulo_banner {
+        text-align: center;
+        font-size: var(--titulo-p);
+        margin-bottom: 3px;
+    }
+ 
+    .slogan{
+        width: 100%;
+        padding: 5px;
+    }
+
+    .subtitulo_banner_2 {
+        font-size: var(--texto-p);
+        text-align: center;
+    }
+
+    .subtitulo_banner_3 {
+        font-size: var(--texto-p);
+        text-align: center;
+    }
+
+    .titulo {
+        font-size: var(--titulo-g);
+        text-align: center;
+    }
 }

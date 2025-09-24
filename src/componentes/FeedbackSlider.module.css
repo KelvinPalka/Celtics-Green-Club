@@ -1,11 +1,15 @@
 .sliderContainer {
   width: 100%;
-  margin: 0 auto;
-  padding: 20px 0;
+}
+
+.slick-track {
+  display: flex !important;
+  justify-content: center !important; 
+  gap: 20px; 
 }
 
 .wrapperCard {
-  background: transparent;   
+  background: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,7 +21,7 @@
   border-radius: 16px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
   padding: 20px;
-  max-width: 525px;   
+  max-width: 525px;
   width: 100%;
   transition: transform 0.3s ease;
 }
@@ -43,6 +47,7 @@
   text-align: center;
   margin-bottom: 12px;
   line-height: 1.4;
+  font-size: 1rem;
 }
 
 .nomeFeedback {
@@ -54,10 +59,100 @@
 
 .slick-prev:before,
 .slick-next:before {
-  color: #000; 
-  font-size: 24px; 
+  color: #000;
+  font-size: 24px;
 }
 
-.slick-prev, .slick-next {
+.slick-prev,
+.slick-next {
   z-index: 20;
+}
+
+@media (max-width: 1680px) {
+  .cardFeedback {
+    max-width: 475px;
+    padding: 18px;
+  }
+
+  .avatarFeedback {
+    width: 90px;
+    height: 90px;
+  }
+
+  .textoFeedback {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .cardFeedback {
+    max-width: 425px;
+    padding: 16px;
+  }
+
+  .avatarFeedback {
+    width: 85px;
+    height: 85px;
+  }
+
+  .textoFeedback {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .cardFeedback {
+    max-width: 350px;
+    padding: 14px;
+  }
+
+  .avatarFeedback {
+    width: 80px;
+    height: 80px;
+  }
+
+  .textoFeedback {
+    font-size: 0.88rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .cardFeedback {
+    max-width: 280px;
+    padding: 12px;
+  }
+
+  .avatarFeedback {
+    width: 70px;
+    height: 70px;
+  }
+
+  .textoFeedback {
+    font-size: 0.85rem;
+  }
+
+  .slick-prev,
+  .slick-next {
+    display: none !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .cardFeedback {
+    max-width: 260px;
+    padding: 10px;
+  }
+
+  .avatarFeedback {
+    width: 65px;
+    height: 65px;
+  }
+
+  .textoFeedback {
+    font-size: 0.82rem;
+  }
+
+  .nomeFeedback {
+    font-size: 0.9rem;
+  }
 }

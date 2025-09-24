@@ -70,13 +70,15 @@ export function FeedbackSlider() {
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 7000,
     cssEase: "ease-in-out",
     pauseOnHover: true,
     arrows: true,
+    centerMode: true,
+    centerPadding: "0px",
     responsive: [
-      { breakpoint: 1024, settings: { slidesToShow: 2 } },
-      { breakpoint: 768, settings: { slidesToShow: 1 } },
+      { breakpoint: 1680, settings: { slidesToShow: 2 }, arrows: false },
+      { breakpoint: 1160, settings: { slidesToShow: 1 }, arrows: false },
     ],
   };
 
