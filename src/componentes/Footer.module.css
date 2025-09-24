@@ -6,21 +6,22 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
-    box-shadow: 0 -3px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.2);
 }
 
 .container {
     display: flex;
     width: 100%;
-    max-width: 1200px; 
+    max-width: 1200px;
     margin: 0 auto;
-    justify-content: space-between; 
+    justify-content: space-between;
     align-items: flex-start;
-    gap: 40px; 
+    gap: 40px;
 }
 
-.coluna_esquerda, .coluna_direita {
-    flex-basis: 50%; 
+.coluna_esquerda,
+.coluna_direita {
+    flex-basis: 50%;
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -39,7 +40,8 @@
     gap: 10px 40px;
 }
 
-.dev, .ctt_dev {
+.dev,
+.ctt_dev {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -56,13 +58,14 @@
     transform: scale(1.1);
 }
 
-.nome, .email {
+.nome,
+.email {
     margin: 0;
     font-size: 0.95rem;
     word-break: break-word;
 }
 
-.tec p{
+.tec p {
     font-size: 1rem;
 }
 
@@ -153,7 +156,7 @@
     cursor: pointer;
     font-weight: bold;
     transition: all 0.3s ease;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
 }
 
 .input_group button:hover {
@@ -164,7 +167,7 @@
 .separador_horizontal {
     width: 100%;
     height: 2px;
-    background-color: rgba(255,255,255,0.2);
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .rodape {
@@ -194,7 +197,8 @@
         justify-items: flex-start;
     }
 
-    .dev, .ctt_dev {
+    .dev,
+    .ctt_dev {
         justify-content: flex-start;
     }
 
@@ -214,7 +218,67 @@
         flex-direction: column;
     }
 
-    .input_group input, .input_group button {
+    .input_group input,
+    .input_group button {
         width: 100%;
+    }
+}
+
+@media screen and (max-width: 1020px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        max-width: 95%;
+        margin: 0 auto;
+    }
+
+    .coluna_esquerda,
+    .coluna_direita {
+        flex-basis: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 10px 20px;
+    }
+
+    .dev,
+    .ctt_dev,
+    .tec {
+        justify-content: center;
+
+        gap: 10px;
+    }
+
+    .social {
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .links {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .input_group {
+        flex-direction: column;
+        gap: 8px;
+        width: 100%;
+        align-items: center;
+    }
+
+    .input_group input,
+    .input_group button {
+        width: 90%;
+    }
+
+    .separador_vertical {
+        display: none;
     }
 }
